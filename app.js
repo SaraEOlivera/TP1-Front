@@ -21,7 +21,7 @@ console.log(contarPalabras("Humahuaca es un lugar copado"));
 
 
 
-/* 3. Contar vocales en una cadena */
+/* 3. Contar vocales en una cadena  */
 
 const contarVocales = texto => {
     let vocales = texto.match(/[aeiou]/g);
@@ -29,3 +29,20 @@ const contarVocales = texto => {
 }
 
 console.log(contarVocales("JavaScript"));
+
+/* 4. Encontrar el palíndromo  */
+const esPalindromo = str1 =>{
+    let str2 =  str1.split("").reverse().join("");
+    let salida = str1 === str2 ? true : false;
+    return salida;
+}
+
+console.log(esPalindromo("hola"));
+console.log(esPalindromo("rallar"));
+console.log(esPalindromo("chau"));
+console.log(esPalindromo("neuquen"));
+
+
+/* */ 
+
+
