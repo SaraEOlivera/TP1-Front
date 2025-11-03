@@ -18,3 +18,14 @@ const contarPalabras = texto => {
 }
 
 console.log(contarPalabras("Humahuaca es un lugar copado"));
+
+
+
+/* 3. Contar vocales en una cadena */
+
+const contarVocales = texto => {
+    let vocales = texto.match(/[aeiou]/g);
+    console.log(vocales)
+}
+
+console.log(contarVocales("JavaScript"));
