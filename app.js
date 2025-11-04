@@ -29,6 +29,8 @@ const contarVocales = texto => {
 }
 
 console.log(contarVocales("JavaScript"));
+console.log(contarVocales("Murcielago"));
+
 
 /* 4. Encontrar el palíndromo  */
 const esPalindromo = str1 =>{
@@ -43,6 +45,15 @@ console.log(esPalindromo("chau"));
 console.log(esPalindromo("neuquen"));
 
 
-/* */ 
+/* 5. Crear un programa para convertir la edad de un perro a años humanos */ 
+function edadCaninna() {
+    const equivalente = 7;
+    edadCan = prompt("Ingresa la edad de tu perro: ");
+    edadHumana = parseInt(edadCan) * equivalente;
+    return `Tu perro tiene ${edadHumana} años humanos`;
+}
+
+//console.log(edadCaninna());
+
 
 
