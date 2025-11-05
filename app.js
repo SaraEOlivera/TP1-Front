@@ -56,4 +56,19 @@ function edadCaninna() {
 //console.log(edadCaninna());
 
 
+/*  6. Convertir la primera letra de cada palabra en mayúscula   */
+const capitalizarPalabras = frase => {
+    let cadena = frase.trim().split(" ");
+
+    cadena.forEach((element, i) => {
+        cadena[i] = element.charAt(0).toUpperCase() + element.slice(1);
+    });
+
+    return cadena.join(" ");
+}
+
+
+console.log(capitalizarPalabras("hola mundo desde javascript"));
+
+
 
