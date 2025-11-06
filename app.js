@@ -70,5 +70,19 @@ const capitalizarPalabras = frase => {
 
 console.log(capitalizarPalabras("hola mundo desde javascript"));
 
+/*  7. Generar los primeros N números de la sucesión de Fibonacci  */
+const fibonacci = numero => {
+    let primero = 0;
+    let segundo = 1;
+    console.log("Secuencia Fibonacci");
+    
+    for (let i = 0; i < numero; i++) {
+        let siguiente = primero + segundo;
+        console.log(primero);
+        primero = segundo;
+        segundo = siguiente
+    }
+}
 
+fibonacci(5);
 
