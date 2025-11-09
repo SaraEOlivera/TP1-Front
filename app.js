@@ -124,6 +124,69 @@ console.log("Precio total del inventario: " + valorTotal);
 
 
 
+/*   9. Estudiantes y Calificaciones   */
+const estudiantes = [
+{ id: 1, nombre: 'Ana', edad: 20, calificaciones: [8, 9, 7, 8] },
+{ id: 2, nombre: 'Carlos', edad: 22, calificaciones: [6, 7, 8, 7] },
+{ id: 3, nombre: 'María', edad: 21, calificaciones: [9, 9, 8, 10] },
+{ id: 4, nombre: 'Juan', edad: 19, calificaciones: [7, 6, 5, 8] }
+];
+
+// 1. Usando forEach: Mostrar nombre y edad de cada estudiante
+estudiantes.forEach(estudiante => {
+    console.log(`Nombre: ${estudiante.nombre} Edad: ${estudiante.edad}`)
+});
+
+// 2. Usando map: Crear array de objetos con nombre y promedio de calificaciones
+
+
+
+
+// 3. Usando filter: Obtener estudiantes con promedio mayor a 7.5
+
+// 4. Usando find: Encontrar estudiante llamado 'María'
+const estudianteMaria = estudiantes.find(estudiante => estudiante.nombre === "María");
+console.log(estudianteMaria);
+
+// 5. Usando reduce: Calcular la edad promedio de los estudiantes
+
+
+/*   10. Películas  */
+const peliculas = [
+{ id: 1, titulo: 'El Padrino', año: 1972, duracion: 175, genero: 'drama', rating: 9.2 },
+{ id: 2, titulo: 'Pulp Fiction', año: 1994, duracion: 154, genero: 'crimen', rating: 8.9 },
+{ id: 3, titulo: 'El Señor de los Anillos', año: 2001, duracion: 178, genero: 'fantasía', rating: 8.8 },
+{ id: 4, titulo: 'Interestelar', año: 2014, duracion: 169, genero: 'ciencia ficción', rating: 8.6 },
+{ id: 5, titulo: 'Parásitos', año: 2019, duracion: 132, genero: 'drama', rating: 8.6 }
+];
+
+// 1. Usando forEach: Mostrar título y año de cada película
+peliculas.forEach(peli => {
+    console.log(`Titulo: ${peli.titulo} - Año: ${peli.año}`)
+});
+
+// 2. Usando map: Crear array de títulos en mayúsculas
+let titulosPelis = peliculas.map(peli => peli.titulo.toUpperCase());
+console.log(titulosPelis);
+
+// 3. Usando filter: Obtener películas de drama con rating mayor a 8.5
+console.log("Películas de drama con rating mayor a 8.5");
+
+const ratingDrama = peliculas.filter(peli => peli.genero === "drama" && peli.rating > 8.5);
+console.log(ratingDrama);
+
+// 4. Usando find: Encontrar película estrenada en 2014
+console.log("Peli estrenada en 2014");
+const peli2014 = peliculas.find(peli => peli.año === 2014);
+console.log(peli2014);
+
+// 5. Usando reduce: Calcular la duración total de todas las películas
+
+const duracionTotal = peliculas.reduce((total, peli) => {
+    return total+= peli.duracion;
+},0)
+
+console.log("Duración total de todas las películas: " + duracionTotal + " minutos");
 
 
 
