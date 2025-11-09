@@ -86,3 +86,45 @@ const fibonacci = numero => {
 
 fibonacci(5);
 
+/*   8. Lista de Productos   */
+const productos = [
+{ id: 1, nombre: 'Laptop', precio: 1200, stock: 15, categoria: 'electrónica' },
+{ id: 2, nombre: 'Mouse', precio: 25, stock: 50, categoria: 'electrónica' },
+{ id: 3, nombre: 'Teclado', precio: 45, stock: 30, categoria: 'electrónica' },
+{ id: 4, nombre: 'Monitor', precio: 300, stock: 20, categoria: 'electrónica' },
+{ id: 5, nombre: 'Libro', precio: 15, stock: 100, categoria: 'libros' }
+];
+
+// 1. Usando forEach: Mostrar en consola cada producto con su nombre y precio
+
+productos.forEach(producto => {
+    console.log(`Nombre: ${producto.nombre}; Precio: ${producto.precio}`)
+    
+});
+// 2. Usando map: Crear un array con solo los nombres de los productos
+
+let nombresProductos = productos.map(producto => producto.nombre);
+console.log(nombresProductos);
+
+
+// 3. Usando filter: Obtener productos electrónicos con stock mayor a 20
+const filtrados = productos.filter(producto => producto.stock > 20);
+console.log(filtrados);
+
+// 4. Usando find: Encontrar el producto con id 3
+const id3 = productos.find(producto => producto.id === 3);
+console.log(id3);
+
+// 5. Usando reduce: Calcular el valor total del inventario (precio * stock)
+const valorTotal = productos.reduce((total, producto) => {
+    return producto.precio * producto.stock;
+},0)
+
+console.log("Precio total del inventario: " + valorTotal);
+
+
+
+
+
+
+
