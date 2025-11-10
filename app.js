@@ -86,6 +86,7 @@ const fibonacci = numero => {
 
 fibonacci(5);
 
+
 /*   8. Lista de Productos   */
 const productos = [
 { id: 1, nombre: 'Laptop', precio: 1200, stock: 15, categoria: 'electrónica' },
@@ -138,17 +139,53 @@ estudiantes.forEach(estudiante => {
 });
 
 // 2. Usando map: Crear array de objetos con nombre y promedio de calificaciones
+console.log("Nombre y promedio de calificaciones");
+let nombrePromedio = estudiantes.map(estudiante => {
+    let suma = 0;
+    estudiante.calificaciones.forEach((nota) => {
+        suma += nota;
+    })
+    let promedio = suma / estudiante.calificaciones.length;
+    
+    return {Nombre: estudiante.nombre, Promedio: promedio}
+});
 
+console.log(nombrePromedio);
 
 
 
 // 3. Usando filter: Obtener estudiantes con promedio mayor a 7.5
+console.log("Estudiantes con promedio mayor a 7.5");
+
+const promedioMayor = estudiantes.filter(estudiante => {
+    let suma = 0;
+    estudiante.calificaciones.forEach((nota) => {
+        suma += nota;
+    })
+    let promedio = suma / estudiante.calificaciones.length;
+    if(promedio > 7.5)
+        return promedio;
+
+});
+console.log(promedioMayor);
+
+
 
 // 4. Usando find: Encontrar estudiante llamado 'María'
+console.log("Estudiante María");
 const estudianteMaria = estudiantes.find(estudiante => estudiante.nombre === "María");
 console.log(estudianteMaria);
 
 // 5. Usando reduce: Calcular la edad promedio de los estudiantes
+console.log("Edad promedio de los estudiantes");
+const edadPromedio = estudiantes.reduce(function (suma, estudiante) {
+    return suma + estudiante.edad;
+    
+},0) / estudiantes.length;
+
+console.log(edadPromedio);
+
+
 
 
 /*   10. Películas  */
